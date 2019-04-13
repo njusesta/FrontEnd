@@ -1,7 +1,7 @@
 import axios from 'axios'
 import store from '../store/store'
 import * as types from '../store/types'
-import router from '..router'
+import router from '../router'
 
 // axios 配置
 axios.defaults.timeout = 5000;
