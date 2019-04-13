@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import Entry from '@/pages/Entry'
 import Home from '@/pages/Home'
 import Activity from '@/pages/Activity'
 import Notice from '@/pages/Notice'
@@ -13,34 +13,49 @@ export default new Router({
   mode: 'history',
   routes: [
     {
-      path: '/HelloWorld',
-      name: 'HelloWorld',
-      component: HelloWorld
+      path: '/Entry',
+      name: 'Entry',
+      component: Entry
     },
     {
       path: '/',
       name: '',
-      component: Home
+      component: Home,
+      meta: {
+        requireAuth: true
+      }
     },
     {
       path: '/Activity',
       name: 'Activity',
-      component: Activity
+      component: Activity,
+      meta: {
+        requireAuth: true
+      }
     },
     {
       path: '/Notice',
       name: 'Notice',
-      component: Notice
+      component: Notice,
+      meta: {
+        requireAuth: true
+      }
     },
     {
       path: '/Recruit',
       name: 'Recruit',
-      component: Recruit
+      component: Recruit,
+      meta: {
+        requireAuth: true
+      }
     },
     {
       path: '/Contact',
       name: 'Contact',
-      component: Contact
+      component: Contact,
+      meta: {
+        requireAuth: true
+      }
     }
   ]
 })
