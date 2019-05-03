@@ -32,21 +32,16 @@
                   <div class="briefintro">
                     <span>{{'活动简述：'+activity[0].detail}}</span><br>
                   </div>
+                  <span>{{'活动类别'+activity[0].cateogory}}</span><br>
                   <span>{{'主办方：'+activity[0].holder}}</span><br>
-                  <span>{{'开始报名时间:'+activity[0].beginbaomTime}}</span>
-                  <span class="endtime">{{'结束报名时间:'+activity[0].endbaomTime}}</span><br>
                   <span class="maxnum">{{'人员限额：'+activity[0].maxnum}}</span><br>
                   <span class="remainnum">{{'剩余名额: '+activity[0].remainnum}}</span><br>
+                  <span>{{'开始报名时间:'+activity[0].beginbaomTime}}</span>
+                  <span class="endtime">{{'结束报名时间:'+activity[0].endbaomTime}}</span><br>
                 </div>
-                <!-- <div v-for="o in 4" :key="o" class="text item">
-                  {{'kai' + o }}
-                </div> -->
-                <!-- <div v-for="i in 4"  class="cardContent">
-                  <span>{{'开始时间'+activity[0].beginbaomTime}}</span>
-                </div> -->
               </el-card>
             </div>
-          </el-col>
+        </el-col>
         <el-col :span="10">
             <div class="activityCard">
               <el-card class="box-card">
@@ -58,88 +53,110 @@
                   <div class="briefintro">
                     <span>{{'活动简述：'+activity[0].detail}}</span><br>
                   </div>
+                  <span>{{'活动类别'+activity[0].cateogory}}</span><br>
                   <span>{{'主办方：'+activity[0].holder}}</span><br>
-                  <span>{{'开始报名时间:'+activity[0].beginbaomTime}}</span>
-                  <span class="endtime">{{'结束报名时间:'+activity[0].endbaomTime}}</span><br>
                   <span class="maxnum">{{'人员限额：'+activity[0].maxnum}}</span><br>
                   <span class="remainnum">{{'剩余名额: '+activity[0].remainnum}}</span><br>
+                  <span>{{'开始报名时间:'+activity[0].beginbaomTime}}</span>
+                  <span class="endtime">{{'结束报名时间:'+activity[0].endbaomTime}}</span><br>
                 </div>
-                <!-- <div v-for="o in 4" :key="o" class="text item">
-                  {{'kai' + o }}
-                </div> -->
-                <!-- <div v-for="i in 4"  class="cardContent">
-                  <span>{{'开始时间'+activity[0].beginbaomTime}}</span>
-                </div> -->
               </el-card>
             </div>
-          </el-col>
+        </el-col>
       </el-row>
       <el-row>
-      <!-- <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
-      <el-col :span="4"><div class="grid-content bg-purple-light"></div></el-col>
-      <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
-      <el-col :span="4"><div class="grid-content bg-purple-light"></div></el-col>
-      <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
-      <el-col :span="4"><div class="grid-content bg-purple-light"></div></el-col> -->
         <el-row>
           <el-col :span="10">
-            <div class="activityCard">
-              <el-card class="box-card">
-                <div slot="header" class="clearfix">
-                  <span>{{activity[0].name}}</span>
-                  <el-button style="float: right; padding: 3px 0;" type="text">活动详情</el-button>
+                <div class="activityCard">
+                  <el-card class="box-card">
+                    <div slot="header" class="clearfix">
+                      <span>{{activity[0].name}}</span>
+                      <el-button style="float: right; padding: 3px 0;" type="text">活动详情</el-button>
+                    </div>
+                    <div>
+                      <div class="briefintro">
+                        <span>{{'活动简述：'+activity[0].detail}}</span><br>
+                      </div>
+                      <span>{{'活动类别: '+activity[0].cateogory}}</span><br>
+                      <span>{{'主办方：'+activity[0].holder}}</span><br>
+                      <span class="maxnum">{{'人员限额：'+activity[0].maxnum}}</span><br>
+                      <span class="remainnum">{{'剩余名额: '+activity[0].remainnum}}</span><br>
+                      <span>{{'开始报名时间:'+activity[0].beginbaomTime}}</span>
+                      <span class="endtime">{{'结束报名时间:'+activity[0].endbaomTime}}</span><br>
+                    </div>
+                  </el-card>
                 </div>
-                <div>
-                  <div class="briefintro">
-                    <span>{{'活动简述：'+activity[0].detail}}</span><br>
-                  </div>
-                  <span>{{'主办方：'+activity[0].holder}}</span><br>
-                  <span>{{'开始报名时间:'+activity[0].beginbaomTime}}</span>
-                  <span class="endtime">{{'结束报名时间:'+activity[0].endbaomTime}}</span><br>
-                  <span class="maxnum">{{'人员限额：'+activity[0].maxnum}}</span><br>
-                  <span class="remainnum">{{'剩余名额: '+activity[0].remainnum}}</span><br>
-                </div>
-                <!-- <div v-for="o in 4" :key="o" class="text item">
-                  {{'kai' + o }}
-                </div> -->
-                <!-- <div v-for="i in 4"  class="cardContent">
-                  <span>{{'开始时间'+activity[0].beginbaomTime}}</span>
-                </div> -->
-              </el-card>
-            </div>
           </el-col>
           <el-col :span="10">
-            <div class="activityCard">
-              <el-card class="box-card">
-                <div slot="header" class="clearfix">
-                  <span>{{activity[0].name}}</span>
-                  <el-button style="float: right; padding: 3px 0;" type="text">活动详情</el-button>
+                <div class="activityCard">
+                  <el-card class="box-card">
+                    <div slot="header" class="clearfix">
+                      <span>{{activity[0].name}}</span>
+                      <el-button style="float: right; padding: 3px 0;" type="text">活动详情</el-button>
+                    </div>
+                    <div>
+                      <div class="briefintro">
+                        <span>{{'活动简述：'+activity[0].detail}}</span><br>
+                      </div>
+                      <span>{{'活动类别'+activity[0].cateogory}}</span><br>
+                      <span>{{'主办方：'+activity[0].holder}}</span><br>
+                      <span class="maxnum">{{'人员限额：'+activity[0].maxnum}}</span><br>
+                      <span class="remainnum">{{'剩余名额: '+activity[0].remainnum}}</span><br>
+                      <span>{{'开始报名时间:'+activity[0].beginbaomTime}}</span>
+                      <span class="endtime">{{'结束报名时间:'+activity[0].endbaomTime}}</span><br>
+                    </div>
+                  </el-card>
                 </div>
-                <div>
-                  <div class="briefintro">
-                    <span>{{'活动简述：'+activity[0].detail}}</span><br>
-                  </div>
-                  <span>{{'主办方：'+activity[0].holder}}</span><br>
-                  <span>{{'开始报名时间:'+activity[0].beginbaomTime}}</span>
-                  <span class="endtime">{{'结束报名时间:'+activity[0].endbaomTime}}</span><br>
-                  <span class="maxnum">{{'人员限额：'+activity[0].maxnum}}</span><br>
-                  <span class="remainnum">{{'剩余名额: '+activity[0].remainnum}}</span><br>
+          </el-col>
+        </el-row>
+        <el-row>
+          <el-col :span="10">
+                <div class="activityCard">
+                  <el-card class="box-card">
+                    <div slot="header" class="clearfix">
+                      <span>{{activity[0].name}}</span>
+                      <el-button style="float: right; padding: 3px 0;" type="text">活动详情</el-button>
+                    </div>
+                    <div>
+                      <div class="briefintro">
+                        <span>{{'活动简述：'+activity[0].detail}}</span><br>
+                      </div>
+                      <span>{{'活动类别: '+activity[0].cateogory}}</span><br>
+                      <span>{{'主办方：'+activity[0].holder}}</span><br>
+                      <span class="maxnum">{{'人员限额：'+activity[0].maxnum}}</span><br>
+                      <span class="remainnum">{{'剩余名额: '+activity[0].remainnum}}</span><br>
+                      <span>{{'开始报名时间:'+activity[0].beginbaomTime}}</span>
+                      <span class="endtime">{{'结束报名时间:'+activity[0].endbaomTime}}</span><br>
+                    </div>
+                  </el-card>
                 </div>
-                <!-- <div v-for="o in 4" :key="o" class="text item">
-                  {{'kai' + o }}
-                </div> -->
-                <!-- <div v-for="i in 4"  class="cardContent">
-                  <span>{{'开始时间'+activity[0].beginbaomTime}}</span>
-                </div> -->
-              </el-card>
-            </div>
+          </el-col>
+          <el-col :span="10">
+                <div class="activityCard">
+                  <el-card class="box-card">
+                    <div slot="header" class="clearfix">
+                      <span>{{activity[0].name}}</span>
+                      <el-button style="float: right; padding: 3px 0;" type="text">活动详情</el-button>
+                    </div>
+                    <div>
+                      <div class="briefintro">
+                        <span>{{'活动简述：'+activity[0].detail}}</span><br>
+                      </div>
+                      <span>{{'活动类别'+activity[0].cateogory}}</span><br>
+                      <span>{{'主办方：'+activity[0].holder}}</span><br>
+                      <span class="maxnum">{{'人员限额：'+activity[0].maxnum}}</span><br>
+                      <span class="remainnum">{{'剩余名额: '+activity[0].remainnum}}</span><br>
+                      <span>{{'开始报名时间:'+activity[0].beginbaomTime}}</span>
+                      <span class="endtime">{{'结束报名时间:'+activity[0].endbaomTime}}</span><br>
+                    </div>
+                  </el-card>
+                </div>
           </el-col>
         </el-row>
     </el-row>
     </div>
   </div>
     <div class="blockpager">
-      <!-- <span class="demonstration">页数较少时的效果</span> -->
       <el-pagination
         layout="prev, pager, next"
         :total="50">
@@ -156,7 +173,7 @@
   margin-bottom: 1em;
 }
 .actCarddiv{
-  margin-left: 150px
+  margin-left: 150px;
 }
 .activityCard{
   margin: 0px 30px 0px 80px;
@@ -178,26 +195,14 @@
   
 }
 .el-row {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     &:last-child {
       margin-bottom: 0;
     }
   }
-  .el-carousel__item h3 {
-    color: #475669;
-    font-size: 50px;
-    opacity: 1;
-    line-height: 500px;
-    margin: 0;
-  }
-
-  .el-carousel__item:nth-child(2n) {
-    background-color: #99a9bf;
-  }
-
-  .el-carousel__item:nth-child(2n+1) {
-    background-color: #d3dce6;
-  }
+ .el-col{
+   margin-left: 2px
+ }
 </style>
 <script>
 import navi from '../components/navi'
@@ -231,12 +236,12 @@ export default {
       activity:[{
         maxnum:'50',
         remainnum:'20',
-        holder:'南京大学软件学院体育部',
-        name:'南京大学软件学院夏季运动会',
+        holder:'许竣博和耿婉莹',
+        name:'耿婉莹夏季运动会',
         pic:require('../assets/2.jpg'),
         beginbaomTime:'2019.4.27',
         endbaomTime:'2019.5.1',
-        detail:'ihsidddddddddddddddddddddddddddddddddd',
+        detail:'耿婉莹是猪猪，她不愿意运动',
         cateogory:'体育活动',
         valid:'true'
         },
