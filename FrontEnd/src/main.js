@@ -9,12 +9,12 @@ import axios from './http/config'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 
-Vue.config.productionTip = false;
-Vue.use(ElementUI);
-Vue.use(Vuex);
-//使用axios处理HTTP请求
-Vue.prototype.$axios= axios;
-Vue.prototype.url_config = '127.0.0.1';
+Vue.config.productionTip = false
+Vue.use(ElementUI)
+Vue.use(Vuex)
+// 使用axios处理HTTP请求
+Vue.prototype.$axios = axios
+Vue.prototype.url_config = '127.0.0.1'
 
 /* eslint-disable no-new */
 new Vue({

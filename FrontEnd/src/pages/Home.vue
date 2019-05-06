@@ -1,16 +1,28 @@
 <template>
   <div class="main">
     <navi></navi>
+
+    <div class="Caro">
+      <el-row class="belownavi">
+        <el-col :span="24">
+          <div class="Activityphotos">
+              <el-carousel indicator-position="outside" height="450px">
+              <el-carousel-item v-for="item in activitypho.length" :key="item">
+                <img v-bind:src= activitypho[item-1].image style="">
+              </el-carousel-item>
+              </el-carousel>
+            </div>
+        </el-col>
+      </el-row>
+    </div>
+
     <div class="announce">
       <div class="ann_title">
-        <h1 style="position: absolute;margin-top:30px;width:100%;text-align:center;color:#EB7A67;">最新通知</h1>
+        <h1 style="position: absolute;margin-top:30px;width:100%;text-align:center;color:#990033;">最新通知</h1>
       </div>
       <div class="ann_body">
-        <div class="ann_body_list">
-          <!-- <el-button @click="resetDateFilter">清除日期过滤器</el-button>
-          <el-button @click="clearFilter">清除所有过滤器</el-button> -->
-          
-          <el-table ref="filterTable" :data="tableData" height=240 style="width: 100%;">
+        <div class="ann_body_list">          
+          <!-- <el-table ref="filterTable" :data="tableData" height=240 style="width: 100%;">
             <el-table-column prop="date" label="日期" sortable width="180" column-key="date" 
             :filters="[{text: '2016-05-01', value: '2016-05-01'}, {text: '2016-05-02', value: '2016-05-02'}, {text: '2016-05-03', value: '2016-05-03'}, {text: '2016-05-04', value: '2016-05-04'}]"
             :filter-method="filterHandler">
@@ -25,18 +37,50 @@
             <el-table-column prop="detail" label="活动详情" :formatter="formatter">
               <el-button  type="primary" @click="readDetail">查看详情</el-button>
             </el-table-column>
-          </el-table>
+          </el-table> -->
+          <div class="ann_c">
+            <div class="ann_c1_t" style="height:20%">
+              <div class="ann_c_t_bl">
 
-          <a href="/Notice"><h3 style="float:right"> >>>>>More </h3></a> 
+              </div>
+            </div>
+            <div class="ann_c_b" style="height:80%">
+              
+            </div>
+          </div>
+
+          <div class="ann_c">
+            <div class="ann_c1_t" style="height:20%">
+              <div class="ann_c_t_bl">
+
+              </div>
+            </div>
+            <div class="ann_c_b" style="height:80%">
+              
+            </div>
+          </div>
+
+          <div class="ann_c">
+            <div class="ann_c1_t" style="height:20%">
+              <div class="ann_c_t_bl">
+
+              </div>
+            </div>
+            <div class="ann_c_b" style="height:80%">
+              
+            </div>
+          </div>
+
+          <!-- <a href="/Notice"><h3 style="float:right"> >>>>>More </h3></a>  -->
         </div>
       </div>
     </div>
 
     <div class="activity">
       <div class="act_title">
-        <h1 style="position: absolute;margin-top:30px;width:100%;text-align:center;">最新活动</h1>
+        <h1 style="position: absolute;margin-top:30px;width:100%;text-align:center;color:#F96A0F;">最新活动</h1>
       </div>
-      <div class="act_body">
+      <!-- <div class="act_body">
         <div class="act_body_list">
           <el-table ref="filterTable" :data="tableData" height=240 style="width: 100%;">
             <el-card class="box-card">
@@ -52,17 +96,19 @@
 
           <a href="/Activity"><h3 style="float:right"> >>>>>More </h3></a> 
         </div>
-      </div>
+      </div> -->
     </div>
 
+    <footter></footter>
   </div>
 </template>
 
 <script>
 import navi from "../components/navi"
+import footter from "../components/footter"
 export default {
   name: 'Home',
-  components: {navi},
+  components: {navi, footter},
   data() {
     return {
         tableData: [{
@@ -70,8 +116,21 @@ export default {
           name: '王小虎',
           inform: '数据科学基础期中考试',
           detail: '通知编号'
-        }]
-      }
+        }],
+        activitypho: [{
+          description: '',
+          image: require('../assets/girl.jpg')},
+        {
+          description: '',
+          image: require('../assets/2.jpg')},
+        {
+          description: '',
+          image: require('../assets/girl2.jpg')},
+        {
+          description: '',
+          image: require('../assets/map.jpg')}
+        ]
+    }
   },
   methods: {
     readDetail() {
@@ -101,33 +160,52 @@ export default {
   .announce {
     margin-top: 0px;
     width: 100%;
-    height: 600px;
+    height: 673px;
   }
   .ann_title{
-    background-color:#D1D0AA;
-    margin-top: 0; 
+    margin-top: 30px; 
     height: 140px;
   }
   .ann_body {
     height: 100%;
-    padding: 10px 20px 10px 20px;
+    /* padding: 10px 20px 10px 20px; */
   }
   .ann_body_list {
-    margin: 20px;
-    height: 300px;
-    padding:10px;
-    border: 2px solid;
+    margin-left: 173px;
+    margin-right: 173px;
+    margin-bottom: 50px;
+    height: 100%;
+    /* padding:10px; */
+    /* border: 2px solid;
     border-color: black;
-    border-radius: 10px;
+    border-radius: 10px; */
+  }
+  .ann_c {
+    width: 270px;
+    height: 450px;
+    float: left;
+  }
+  .ann_c_t_bl {
+    margin-left:105px;
+    height:50px;
+    width:60px;
+    background-color: #990033;
+  }
+  .ann_c_b {
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid;
+    border-color: #990033;
   }
 
+
   .activity {
+    background-color: #EFEDED;
     margin-top: 0px;
     width: 100%;
     height: 600px;
   }
   .act_title{
-    background-color:#A7A430;
     margin-top: 0; 
     height: 140px;
   }
@@ -136,7 +214,6 @@ export default {
     padding: 10px 20px 10px 20px;
   }
   .act_body_list {
-    margin: 20px;
     height: 300px;
     padding:10px;
     border: 2px solid;
