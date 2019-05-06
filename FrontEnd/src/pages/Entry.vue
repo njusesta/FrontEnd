@@ -20,6 +20,8 @@
 </template>
 
 <script>
+import mock from '@/mock/mock.js'
+
 export default {
   name: 'Entry',
   data() {
@@ -31,7 +33,27 @@ export default {
   },
   methods:{
     login: function(){
-
+      let self = this;
+      this.$axios.post('http://localhost:8000/user/userLog', {"acc": self.account, "password": self.password}).then(
+          res => {
+            // console.log(res);
+            var data = res.data;            
+            if(data.LogRes=="true"){
+              alert("登陆成功！！！！！")
+            }
+            // data = {
+            //   "accessToken": "1",
+            //   "username": self.account,
+            //   "roles": "user"
+            // }
+            // store.commit(types.LOGIN, data);
+            // localStorage.ifUnread=1;
+            self.$router.replace({
+              path: '/',
+              query: { redirect: self.$router.currentRoute.path }})
+          }).catch(err => {
+            console.log(err)
+      });
     }
   }
   
