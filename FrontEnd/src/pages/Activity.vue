@@ -8,7 +8,7 @@
     <el-row class="belownavi"  justify="start" type="flex">
       <el-col :span="15">
           <div class="Activityphotos">
-              <el-carousel indicator-position="outside" height="450px">
+              <el-carousel indicator-position="outside" height="500px">
               <el-carousel-item v-for="item in activitypho.length" :key="item">
                 <!-- <img v-bind:src= activitypho[item-1].image style=""> -->
                 <img v-bind:src= activitypho[1].image style="">
