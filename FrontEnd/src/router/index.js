@@ -6,6 +6,7 @@ import Activity from '@/pages/Activity'
 import Notice from '@/pages/Notice'
 import Recruit from '@/pages/Recruit'
 import Contact from '@/pages/Contact'
+import ActivityDetails from '@/pages/ActivityDetails'
 
 Vue.use(Router)
 
@@ -16,6 +17,11 @@ export default new Router({
       path: '/Entry',
       name: 'Entry',
       component: Entry
+    },
+    {
+      path: '/Acitivity/ActivityDetails',
+      name: 'ActivitYDetails',
+      component: ActivityDetails
     },
     {
       path: '/',

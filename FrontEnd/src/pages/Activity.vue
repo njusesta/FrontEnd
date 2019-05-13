@@ -1,5 +1,4 @@
 <template>
-<div>
   <div class="domain">
     <div class="navigation">
       <navi>
@@ -18,7 +17,7 @@
       </el-col>
     </el-row>
     </div>
-    <div class="actShow">活动报名</div>
+    <div class="actShow">正在报名</div>
     <div class="actCarddiv">
       <el-row>
         <el-col :span="10">
@@ -26,7 +25,7 @@
               <el-card class="box-card">
                 <div slot="header" class="clearfix">
                   <span>{{activity[0].name}}</span>
-                  <el-button style="float: right; padding: 3px 0;" type="text">活动详情</el-button>
+                 <a href="/Activity/ActivityDetails"><el-button style="float: right; padding: 3px 0;" type="text">活动详情</el-button></a>
                 </div>
                 <div>
                   <div class="briefintro">
@@ -47,7 +46,7 @@
               <el-card class="box-card">
                 <div slot="header" class="clearfix">
                   <span>{{activity[0].name}}</span>
-                  <el-button style="float: right; padding: 3px 0;" type="text">活动详情</el-button>
+                 <a href="/Activity/ActivityDetails"><el-button style="float: right; padding: 3px 0;" type="text">活动详情</el-button></a>
                 </div>
                 <div>
                   <div class="briefintro">
@@ -71,7 +70,7 @@
                   <el-card class="box-card">
                     <div slot="header" class="clearfix">
                       <span>{{activity[0].name}}</span>
-                      <el-button style="float: right; padding: 3px 0;" type="text">活动详情</el-button>
+                 <a href="/Activity/ActivityDetails"><el-button style="float: right; padding: 3px 0;" type="text">活动详情</el-button></a>
                     </div>
                     <div>
                       <div class="briefintro">
@@ -92,7 +91,7 @@
                   <el-card class="box-card">
                     <div slot="header" class="clearfix">
                       <span>{{activity[0].name}}</span>
-                      <el-button style="float: right; padding: 3px 0;" type="text">活动详情</el-button>
+                 <a href="/Activity/ActivityDetails"><el-button style="float: right; padding: 3px 0;" type="text">活动详情</el-button></a>
                     </div>
                     <div>
                       <div class="briefintro">
@@ -115,7 +114,7 @@
                   <el-card class="box-card">
                     <div slot="header" class="clearfix">
                       <span>{{activity[0].name}}</span>
-                      <el-button style="float: right; padding: 3px 0;" type="text">活动详情</el-button>
+                 <a href="/Activity/ActivityDetails"><el-button style="float: right; padding: 3px 0;" type="text">活动详情</el-button></a>
                     </div>
                     <div>
                       <div class="briefintro">
@@ -136,7 +135,7 @@
                   <el-card class="box-card">
                     <div slot="header" class="clearfix">
                       <span>{{activity[0].name}}</span>
-                      <el-button style="float: right; padding: 3px 0;" type="text">活动详情</el-button>
+                 <a href="/Activity/ActivityDetails"><el-button style="float: right; padding: 3px 0;" type="text">活动详情</el-button></a>
                     </div>
                     <div>
                       <div class="briefintro">
@@ -152,17 +151,17 @@
                   </el-card>
                 </div>
           </el-col>
-        </el-row>
-    </el-row>
+        </el-row></el-row>
     </div>
-  </div>
     <div class="blockpager">
       <el-pagination
         layout="prev, pager, next"
         :total="50">
       </el-pagination>
     </div>
-</div>
+    <div class=""></div>
+<!-- 招募详情页（加入项目页）------联系我们-----活动主页------活动发布页------活动详情页（报名） -->
+  </div>
 </template>
 
 <style>
@@ -176,29 +175,38 @@
   margin-left: 150px;
 }
 .activityCard{
-  margin: 0px 30px 0px 80px;
+  margin: 0px 10px 0px 80px;
   width: 480px;
+  background-color: lightgray
 }
 .blockpager{
-  text-align: center
+  text-align: center;
+  background-color: #D1D0AA;
+  margin-top: 0%;
+  border-radius: 80px 50px;
+
 }
 .actShow{
-  padding: 20px;
-  padding-bottom: 50px;
+  padding: 10px 5px 30px 5px;
   text-align: center;
   color:#EB7A67;
-  font-size: 2em
+  font-size: 2em;
+  width: 160px;
+  height: 20px;
+  background-color: rgb(233, 233, 240);
+  margin: 0px 670px 50px auto ;
+  border-radius: 80px 50px;
+}
+.box-card{
+  background-color: ghostwhite;
 }
 .domain{
   margin-left: 0px;
   margin-right: 0px;
-  
+  background-color: #D1D0AA;
 }
 .el-row {
     margin-bottom: 20px;
-    &:last-child {
-      margin-bottom: 0;
-    }
   }
  .el-col{
    margin-left: 2px
@@ -216,7 +224,6 @@ export default {
       activitypho: [{
         description: '',
         image: require('../assets/girl.jpg')
-    
       },
       {
         description: '',
@@ -232,7 +239,6 @@ export default {
         image: require('../assets/map.jpg')
       }
       ],
-
       activity:[{
         maxnum:'50',
         remainnum:'20',
