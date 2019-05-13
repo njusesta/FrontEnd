@@ -54,12 +54,12 @@ export default {
 }
 .map{
   width: 400px;
-  margin-left: 230px;
+  margin-left: 220px;
   margin-top: 30px;
 }
 .info{
   text-align: left;
-  padding-left: 100px;
+  padding-left: 60px;
   float: right;
 }
 .domaintext{
