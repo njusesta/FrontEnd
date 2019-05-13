@@ -79,10 +79,6 @@
               <div class="ann_c_b_detail" style="height:70%"><b>详细内容:</b><br> {{ ann_detail }} </div>
             </div>
           </div>
-
-
-          
-
           <!-- <a href="/Notice"><h3 style="float:right"> >>>>>More </h3></a>  -->
         </div>
       </div>
