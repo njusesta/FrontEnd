@@ -5,7 +5,7 @@
       </navi>
     </div>
     <div class="" style="height:100%;width:100%">
-    <el-row class="belownavi" gutter="10" justify="start" type="flex">
+    <el-row class="belownavi"  justify="start" type="flex">
       <el-col :span="15">
           <div class="Activityphotos">
               <el-carousel indicator-position="outside" height="450px">
@@ -17,8 +17,9 @@
               </el-carousel>
           </div>
       </el-col>
-      <el-col :span="9">
+      <el-col :span="9" class="linkdomain">
         <div class="title">活动新闻</div>
+        <div class="linkdomain">
         <a href="/Activity/ActivityDetails"><div class="newslink">{{activity[0].detail}}</div></a>
         <a href="/Activity/ActivityDetails"><div class="newslink">{{activity[0].detail}}</div></a>
         <a href="/Activity/ActivityDetails"><div class="newslink">{{activity[0].detail}}</div></a>
@@ -28,6 +29,7 @@
         <a href="/Activity/ActivityDetails"><div class="newslink">{{activity[0].detail}}</div></a>
         <a href="/Activity/ActivityDetails"><div class="newslink">{{activity[0].detail}}</div></a>
         <a href="/Activity/ActivityDetails"><div class="newslink">{{activity[0].detail}}</div></a>
+        </div>
       </el-col><br>
       
     </el-row>
@@ -183,8 +185,14 @@
 </template>
 
 <style>
+.linkdomain{
+  background-color: rgb(255, 255, 255);
+
+}
 .title{
   text-align: center;
+  margin-top: 10px;
+  margin-bottom: 2px;
 }
 .belownavi{
   border:1px solid;
@@ -201,7 +209,7 @@
   width: 100%;
   height: 25px;
   min-height: 20px;
-  text-align: center;
+  text-align: left;
   padding: 2% 2% 2% 2%;
 }
 .actCarddiv{
@@ -300,7 +308,7 @@ export default {
         pic:require('../assets/2.jpg'),
         beginbaomTime:'2019.4.27',
         endbaomTime:'2019.5.1',
-        detail:'耿婉莹是猪猪，她不愿意运动',
+        detail:'耿婉莹是猪猪，她不愿意运动hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh',
         cateogory:'体育活动',
         valid:'true'
         },
