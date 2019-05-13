@@ -46,7 +46,7 @@ export default {
 }
 </script>
 
-<style>
+<style>nn
 .pic,.map ,.info{
   height: 400px;
   text-align: center;
@@ -59,7 +59,7 @@ export default {
 }
 .info{
   text-align: left;
-  padding-left: 50px;
+  padding-left: 100px;
   float: right;
 }
 .domaintext{
