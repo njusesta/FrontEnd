@@ -20,7 +20,7 @@ export default {
     }
   },
   mounted(){
-    alert("Notice！");
+    // alert("Notice！");
   },
   methods: {
 
