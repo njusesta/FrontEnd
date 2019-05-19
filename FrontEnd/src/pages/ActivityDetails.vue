@@ -1,63 +1,28 @@
 <template>
-    <el-container>
-        <el-header><navi></navi></el-header>
+  <div >
+      <div class="domian">
+        <navi></navi>
         <el-container>
-            <el-aside width="200px">  
-                <el-tabs :tab-position="tabPosition" style="height: 200px;">
-                    <el-tab-pane label="用户管理">用户管理</el-tab-pane>
-                    <el-tab-pane label="配置管理">配置管理</el-tab-pane>
-                    <el-tab-pane label="角色管理">角色管理</el-tab-pane>
-                    <el-tab-pane label="定时任务补偿">定时任务补偿</el-tab-pane>
-                </el-tabs>
-            </el-aside>
-            <el-main><el-image v-for="url in urls" :key="url" :src="url" lazy></el-image></el-main>
-            <el-footer>footer</el-footer>
+          <el-aside width="200px">Aside</el-aside>
+          <el-main>Main</el-main>
         </el-container>
-    </el-container>
+      </div>
+      <footter></footter>
+  </div>
 </template>
-</template>
-
-
 
 <style>
-  .el-header, .el-footer {
-    background-color: #B3C0D1;
-    color: #333;
-    text-align: center;
-    line-height: 60px;
-  }
-  
-  .el-aside {
-    background-color: #D3DCE6;
-    color: #333;
-    text-align: center;
-    line-height: 200px;
-  }
-  
-  .el-main {
-    background-color: #E9EEF3;
-    color: #333;
-    text-align: center;
-    line-height: 160px;
-  }
-
-  body > .el-container {
-    margin-bottom: 40px;
-  }
-
-  .el-container:nth-child(6) .el-aside {
-    line-height: 260px;
-  }
 </style>
 <script>
 import navi from '../components/navi'
+import footter from '../components/footter'
 
 export default {
   name: 'ActivityDetails',
-  components: {navi},
+  components: {navi,footter},
   data () {
     return {
-        tabPosition: 'left',
+        tabPosition: 'center',
         urls: [
           'https://fuss10.elemecdn.com/a/3f/3302e58f9a181d2509f3dc0fa68b0jpeg.jpeg',
           'https://fuss10.elemecdn.com/1/34/19aa98b1fcb2781c4fba33d850549jpeg.jpeg',
